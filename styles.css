@@ -1,1 +1,44 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
+.container {
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.gradient-text {
+    font-size: 3em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6b6b, #f8e71c, #7ed321, #50e3c2, #4a90e2, #9013fe);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s infinite linear;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
