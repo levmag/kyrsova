@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<style> /* Изменяем цвет всех ссылок */ a { color: red; /* Цвет обычных ссылок */ }
-	/* Изменяем цвет при наведении курсора */ a:hover { color: blue; /* Цвет ссылок при наведении */ }
-	/* Изменяем цвет активной ссылки */ a:active { color: green; /* Цвет активной ссылки */ }
-	/* Изменяем цвет посещенной ссылки */ a:visited { color: purple; /* Цвет посещённой ссылки */ }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Генератор Эффектного Текста</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="myicon.png">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анимация Текста</title>
-	 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <style>
+        /* Стили для ссылок */
+        a { color: red; } /* Обычные ссылки */
+        a:hover { color: blue; } /* При наведении */
+        a:active { color: green; } /* Активные ссылки */
+        a:visited { color: purple; } /* Посещённые ссылки */
+
+        /* Анимация текста */
+        .animated-text {
+            font-size: 4em;
+            opacity: 0;
+            animation: fadeIn 3s forwards, colorChange 3s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff6b6b; }
+            100% { color: #50e3c2; }
+        }
+    </style>
 </head>
 <body>
-	<a href="#">Это ссылка красного цвета.</a>
-	<div class="container">
+    <a href="#">Это ссылка красного цвета.</a>
+    <div class="container">
         <input type="text" id="textInput" placeholder="Введите текст здесь" oninput="updateText()">
         <h1 id="displayText" class="gradient-text">Дипломная работа Марченко Льва</h1>
         <a href="https://onlinetestpad.com/xqrmoc6glvvzi">Онлайн конструктор сайта</a>
-	<a href="https://github.com/levmag/third.git">Пример странички</a>
+        <a href="https://github.com/levmag/third.git">Пример странички</a>
         <a href="https://app.leadteh.ru/">лидтех</a>
-	<a href="https://vk.com/topic-149017466_46631721">гадот</a>
-	<a href="https://marchenko43.wordpress.com/%d0%b4%d0%b8%d0%bf%d0%bb%d0%be%d0%bc%d0%bd%d0%b0%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0/">wordpres</a>
-	<a href="https://onlinetestpad.com/xqrmoc6glvvzi">Онлайн конструктор сайта</a>
-	<a href="https://www.figma.com/design/s1CZW3Lu3QBw4eR1c2VocE/Untitled?node-id=101-2&p=f&t=htGYacBv7VAegLnf-0">фигма</a>
+        <a href="https://vk.com/topic-149017466_46631721">гадот</a>
+        <a href="https://marchenko43.wordpress.com/%d0%b4%d0%b8%d0%bf%d0%bb%d0%be%d0%bc%d0%bd%d0%b0%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0/">wordpres</a>
+        <a href="https://www.figma.com/design/s1CZW3Lu3QBw4eR1c2VocE/Untitled?node-id=101-2&p=f&t=htGYacBv7VAegLnf-0">фигма</a>
         <a href="https://github.com/levmag/Control.git">пример сайта</a>
-	<a href="https://stackblitzstartersq3cfrgv3-5sx2--8080--31ca1d38.local-credentialless.webcontainer.io">stackblitz</a>
+        <a href="https://stackblitzstartersq3cfrgv3-5sx2--8080--31ca1d38.local-credentialless.webcontainer.io">stackblitz</a>
     </div>
-    <script src="script.js"></script>
-
+    <script>
+        function updateText() {
+            const input = document.getElementById('textInput');
+            const displayText = document.getElementById('displayText');
+            displayText.textContent = input.value || "Дипломная работа Марченко Льва";
+        }
+    </script>
 </body>
-
 </html>
