@@ -28,20 +28,71 @@
             0% { color: #ff6b6b; }
             100% { color: #50e3c2; }
         }
+
+        /* Новые стили для фона */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.redd.it/gojo-satoru-wallpaper-v0-0z8v3n7v5z5b1.jpg?width=3840&format=pjpg&auto=webp&s=1a5c8b2a1a1e5d0c1b5e5e5e5e5e5e5e5e5e5e5');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .gradient-text {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff6b6b, #f8e71c, #7ed321, #50e3c2, #4a90e2, #9013fe);
+            background-size: 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 5s infinite linear;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
     </style>
 </head>
 <body>
-    <a href="#">Это ссылка красного цвета.</a>
     <div class="container">
+        <a href="#">Это ссылка красного цвета.</a>
         <input type="text" id="textInput" placeholder="Введите текст здесь" oninput="updateText()">
         <h1 id="displayText" class="gradient-text">Дипломная работа Марченко Льва</h1>
-        <a href="https://onlinetestpad.com/xqrmoc6glvvzi">Онлайн конструктор сайта</a>
-        <a href="https://github.com/levmag/third.git">Пример странички</a>
-        <a href="https://app.leadteh.ru/">лидтех</a>
-        <a href="https://vk.com/topic-149017466_46631721">гадот</a>
-        <a href="https://marchenko43.wordpress.com/%d0%b4%d0%b8%d0%bf%d0%bb%d0%be%d0%bc%d0%bd%d0%b0%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0/">wordpres</a>
-        <a href="https://www.figma.com/design/s1CZW3Lu3QBw4eR1c2VocE/Untitled?node-id=101-2&p=f&t=htGYacBv7VAegLnf-0">фигма</a>
-        <a href="https://github.com/levmag/Control.git">пример сайта</a>
+        <a href="https://onlinetestpad.com/xqrmoc6glvvzi">Онлайн конструктор сайта</a><br>
+        <a href="https://github.com/levmag/third.git">Пример странички</a><br>
+        <a href="https://app.leadteh.ru/">лидтех</a><br>
+        <a href="https://vk.com/topic-149017466_46631721">гадот</a><br>
+        <a href="https://marchenko43.wordpress.com/%d0%b4%d0%b8%d0%bf%d0%bb%d0%be%d0%bc%d0%bd%d0%b0%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d0%b0/">wordpres</a><br>
+        <a href="https://www.figma.com/design/s1CZW3Lu3QBw4eR1c2VocE/Untitled?node-id=101-2&p=f&t=htGYacBv7VAegLnf-0">фигма</a><br>
+        <a href="https://github.com/levmag/Control.git">пример сайта</a><br>
         <a href="https://stackblitzstartersq3cfrgv3-5sx2--8080--31ca1d38.local-credentialless.webcontainer.io">stackblitz</a>
     </div>
     <script>
@@ -50,6 +101,9 @@
             const displayText = document.getElementById('displayText');
             displayText.textContent = input.value || "Дипломная работа Марченко Льва";
         }
+    </script>
+</body>
+</html>
     </script>
 </body>
 </html>
