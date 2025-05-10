@@ -172,6 +172,56 @@
             background: linear-gradient(135deg, rgba(90,40,120,0.8) 0%, rgba(20,20,20,0.8) 100%);
         }
         
+        /* Стили для таблицы */
+        .table-container {
+            width: 100%;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, rgba(70,20,100,0.8) 0%, rgba(0,0,0,0.8) 100%);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .code-container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            border-left: 3px solid #ff6b6b;
+        }
+        
+        .code-title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #50e3c2;
+        }
+        
         /* Подвал */
         footer {
             background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(40,10,70,0.9) 100%);
@@ -271,6 +321,11 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            
+            th, td {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -310,6 +365,88 @@
                 <a href="https://stackblitzstartersq3cfrgv3-5sx2--8080--31ca1d38.local-credentialless.webcontainer.io" class="link-button">
                     <i class="fas fa-code"></i> StackBlitz
                 </a>
+            </div>
+            
+            <!-- Добавленная таблица -->
+            <div class="table-container animated" style="animation-delay: 0.3s;">
+                <h2 style="margin-bottom: 1rem;">Пример данных из исследования</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Показатель</th>
+                            <th>Группа A</th>
+                            <th>Группа B</th>
+                            <th>Группа C</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Средний балл</td>
+                            <td>4.2</td>
+                            <td>3.8</td>
+                            <td>4.5</td>
+                        </tr>
+                        <tr>
+                            <td>Успеваемость (%)</td>
+                            <td>87</td>
+                            <td>75</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>Вовлеченность</td>
+                            <td>Высокая</td>
+                            <td>Средняя</td>
+                            <td>Очень высокая</td>
+                        </tr>
+                        <tr>
+                            <td>Кол-во участников</td>
+                            <td>32</td>
+                            <td>28</td>
+                            <td>35</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Код таблицы -->
+                <div class="code-container animated" style="animation-delay: 0.4s;">
+                    <div class="code-title">HTML-код таблицы:</div>
+                    <pre>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Показатель&lt;/th&gt;
+            &lt;th&gt;Группа A&lt;/th&gt;
+            &lt;th&gt;Группа B&lt;/th&gt;
+            &lt;th&gt;Группа C&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Средний балл&lt;/td&gt;
+            &lt;td&gt;4.2&lt;/td&gt;
+            &lt;td&gt;3.8&lt;/td&gt;
+            &lt;td&gt;4.5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Успеваемость (%)&lt;/td&gt;
+            &lt;td&gt;87&lt;/td&gt;
+            &lt;td&gt;75&lt;/td&gt;
+            &lt;td&gt;92&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Вовлеченность&lt;/td&gt;
+            &lt;td&gt;Высокая&lt;/td&gt;
+            &lt;td&gt;Средняя&lt;/td&gt;
+            &lt;td&gt;Очень высокая&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Кол-во участников&lt;/td&gt;
+            &lt;td&gt;32&lt;/td&gt;
+            &lt;td&gt;28&lt;/td&gt;
+            &lt;td&gt;35&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+                </div>
             </div>
         </div>
     </div>
